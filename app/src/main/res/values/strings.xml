@@ -11,11 +11,8 @@
     <string name="list_title">Shopping List</string>
     <string name="list_description">Add Items to your shopping list or send them to the fridge/pantry </string>
 
-    <string name="fridge_title">Fridge</string>
-    <string name="fridge_description">Stock your Fridge, Delete Items or Send Items to your Shopping List</string>
-
-    <string name="pantry_title">Pantry</string>
-    <string name="pantry_description">Stock your Pantry, Delete Items or Send Items to your Shopping List</string>
+    <string name="home_title">Home Stock</string>
+    <string name="home_description">Keep inventory on home groceries, Delete Items or Send Items to your Shopping List</string>
 
     <string name="map_title">Find a Store</string>
     <string name="map_description">Displays nearby stores</string>

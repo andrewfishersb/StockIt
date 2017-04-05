@@ -2,10 +2,6 @@ package com.fisher.andrew.stockit;
 
 import android.widget.DatePicker;
 
-/**
- * Created by andrewfisher on 4/5/17.
- */
-
 public class Item {
 
 
@@ -35,5 +31,7 @@ public class Item {
         this.expirationDate = expirationDate;
     }
 
-
+    public void resetExpirationDate(){
+        this.expirationDate = null;
+    }
 }

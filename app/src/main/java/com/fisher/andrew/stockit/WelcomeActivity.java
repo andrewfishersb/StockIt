@@ -2,6 +2,7 @@ package com.fisher.andrew.stockit;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -11,12 +12,13 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import static android.text.Html.FROM_HTML_MODE_LEGACY;
-
+//GET RID OF BTN NEXT???? SINCE IT IS INVISIBLE
 public class WelcomeActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
@@ -61,6 +63,8 @@ public class WelcomeActivity extends AppCompatActivity {
 
         addBottomDots(0);
 
+        changeStatusBarColor();
+
         mWelcomeViewPagerAdapter = new WelcomeViewPagerAdapter();
 
         viewPager.setAdapter(mWelcomeViewPagerAdapter);
@@ -87,29 +91,28 @@ public class WelcomeActivity extends AppCompatActivity {
         });
     }
 
-    private void addBottomDots(int currentPage){
+    private void addBottomDots(int currentPage) {
         dots = new TextView[layouts.length];
 
         int[] colorsActive = getResources().getIntArray(R.array.array_dot_active);
         int[] colorsInactive = getResources().getIntArray(R.array.array_dot_inactive);
 
         dotsLayout.removeAllViews();
-        for (int i = 0; i < dots.length;i++){
+        for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
-            if(Build.VERSION.SDK_INT>=24){
-                dots[i].setText(Html.fromHtml("&#8226;",FROM_HTML_MODE_LEGACY));//maybe 24?
-            }else{
+//            if (Build.VERSION.SDK_INT >= 24) {
+//                dots[i].setText(Html.fromHtml("&#8226;", FROM_HTML_MODE_LEGACY));//maybe 24?
+//            } else {
                 dots[i].setText(Html.fromHtml("&#8226;"));
-            }
+//            }
             dots[i].setTextSize(35);
             dots[i].setTextColor(colorsInactive[currentPage]);
             dotsLayout.addView(dots[i]);
         }
 
-        if(dots.length>0){
-            dots[currentPage].setText(colorsActive[currentPage]);
-        }
-
+        if (dots.length > 0){
+            dots[currentPage].setTextColor(colorsActive[currentPage]);
+         }
 
     }
     private int getItem(int i){
@@ -130,15 +133,15 @@ public class WelcomeActivity extends AppCompatActivity {
             addBottomDots(position);
 
             //Change next button
-            if(position==layouts.length-1){
-                //last page
-                btnNext.setVisibility(View.GONE);
-                btnSkip.setVisibility(View.GONE);
-            }else {
+//            if(position==layouts.length-1){
+//                //last page
+//                btnNext.setVisibility(View.GONE);
+//                btnSkip.setVisibility(View.GONE);
+//            }else {
                 // still pages are left
                 btnNext.setText(getString(R.string.next));
                 btnSkip.setVisibility(View.VISIBLE);
-            }
+//            }
 
         }
 
@@ -153,6 +156,13 @@ public class WelcomeActivity extends AppCompatActivity {
         }
     };
 
+    private void changeStatusBarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.TRANSPARENT);
+        }
+    }
 
     //VIEW PAGER ADAPTER
     public class WelcomeViewPagerAdapter extends PagerAdapter {

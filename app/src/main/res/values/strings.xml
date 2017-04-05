@@ -3,7 +3,6 @@
     <string name="title_activity_welcome">Home Screen</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
-    <string name="start">GOT IT</string>
 
     <string name="welcome_title">Welcome to StockIt</string>
     <string name="welcome_description">An all in one Shopping List</string>

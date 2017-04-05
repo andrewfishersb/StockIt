@@ -42,8 +42,7 @@
     <array name="array_dot_inactive">
         <item>@color/dot_inactive_welcome</item>
         <item>@color/dot_inactive_list</item>
-        <item>@color/dot_inactive_fridge</item>
-        <item>@color/dot_inactive_pantry</item>
+        <item>@color/dot_inactive_home</item>
         <item>@color/dot_inactive_map</item>
         <item>@color/dot_inactive_clock</item>
         <item>@color/dot_inactive_rotten</item>

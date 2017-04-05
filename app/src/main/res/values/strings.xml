@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">StockIt</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="welcome_title">Welcome to StockIt</string>
+    <string name="welcome_description">An all in one Shopping List</string>
+
+    <string name="list_title">Shopping List</string>
+    <string name="list_description">Add Items to your shopping list or send them to the fridge/pantry </string>
+
+    <string name="fridge_title">Fridge</string>
+    <string name="fridge_description">Stock your Fridge, Delete Items or Send Items to your Shopping List</string>
+
+    <string name="pantry_title">Pantry</string>
+    <string name="pantry_description">Stock your Pantry, Delete Items or Send Items to your Shopping List</string>
+
+    <string name="map_title">Find a Store</string>
+    <string name="map_description">Displays nearby stores</string>
+
+    <string name="clock_title">Expiration Tracker</string>
+    <string name="clock_description">Track and be notified when your food expires</string>
+
+    <string name="rotten_title">Is This Mold???</string>
+    <string name="rotten_description">Upload a picture or look at other users pictures to judge whether your food is rotten!!!</string>
+
+    <string name="instructions_again">See Instructions</string>
+
 </resources>

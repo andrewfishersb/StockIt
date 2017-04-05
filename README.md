@@ -1,0 +1,2 @@
+# StockIt
+Shopping Inventory App

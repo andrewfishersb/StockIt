@@ -8,7 +8,7 @@
     tools:context="com.fisher.andrew.stockit.MainActivity">
 
     <Button
-        android:id="@+id/shoppingList"
+        android:id="@+id/shoppingListButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="19dp"
@@ -19,7 +19,7 @@
         />
 
     <Button
-        android:id="@+id/homeStock"
+        android:id="@+id/homeStockButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="18dp"
@@ -30,7 +30,7 @@
         />
 
     <Button
-        android:id="@+id/maps"
+        android:id="@+id/mapButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="19dp"
@@ -41,7 +41,7 @@
         />
 
     <Button
-        android:id="@+id/pictures"
+        android:id="@+id/pictureButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="19dp"

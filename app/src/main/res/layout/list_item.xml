@@ -21,7 +21,8 @@
         <com.daimajia.swipe.SwipeLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/swipe_list_item">
 
             <!-- Bottom View Start-->
             <LinearLayout
@@ -33,25 +34,29 @@
             android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/set_expiration"
+                    android:id="@+id/swipe_set_expiration"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#002B7F"
-                    android:src="@drawable/ic_access_time_white_48dp"/>
+                    android:src="@drawable/ic_schedule_white_24dp"/>
 
                 <ImageView
-                    android:id="@+id/send_to_list"
+                    android:id="@+id/swipe_send_to_list"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#FCD116"
-                    android:src="@drawable/ic_shopping_basket_white_48dp"/>
+                    android:src="@drawable/ic_shopping_basket_white_24dp"/>
+
                 <ImageView
+                    android:id="@+id/swipe_delete"
+
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:background="#CE1126"/>
+                    android:layout_weight="1"
+                    android:background="#CE1126"
+                    android:src="@drawable/ic_delete_forever_white_24dp"/>
             <!--What you want to show-->
         </LinearLayout>
 

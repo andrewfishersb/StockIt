@@ -1,14 +1,14 @@
 package com.fisher.andrew.stockit.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
-import com.fisher.andrew.stockit.adapter.ItemAdapter;
-import com.fisher.andrew.stockit.model.ListItem;
+import android.widget.ImageView;
 
 import com.fisher.andrew.stockit.R;
+import com.fisher.andrew.stockit.adapter.ItemAdapter;
+import com.fisher.andrew.stockit.model.ListItem;
 
 import java.util.ArrayList;
 
@@ -62,6 +62,54 @@ public class HomeListActivity extends AppCompatActivity {
         //attach adapter to recyclerview
         rvItems.setAdapter(itemAdapter);
         rvItems.setLayoutManager(new LinearLayoutManager(this));
+        ImageView ex = (ImageView) findViewById(R.id.swipe_set_expiration);
+        ImageView send = (ImageView) findViewById(R.id.swipe_send_to_list);
+        ImageView delete = (ImageView) findViewById(R.id.swipe_delete);
 
+
+
+
+
+
+        //is currently swiping without all this code but this may soon be neccesary
+//        SwipeLayout swipeLayout =  (SwipeLayout)findViewById(R.id.swipe_list_item);
+//
+////set show mode.
+//        swipeLayout.setShowMode(SwipeLayout.ShowMode.LayDown);
+
+//add drag edge.(If the BottomView has 'layout_gravity' attribute, this line is unnecessary)
+//        swipeLayout.addDrag(SwipeLayout.DragEdge.Left, findViewById(R.id.bottom_wrapper));
+//
+//        swipeLayout.addSwipeListener(new SwipeLayout.SwipeListener() {
+//            @Override
+//            public void onClose(SwipeLayout layout) {
+//                //when the SurfaceView totally cover the BottomView.
+//            }
+//
+//            @Override
+//            public void onUpdate(SwipeLayout layout, int leftOffset, int topOffset) {
+//                //you are swiping.
+//            }
+//
+//            @Override
+//            public void onStartOpen(SwipeLayout layout) {
+//
+//            }
+//
+//            @Override
+//            public void onOpen(SwipeLayout layout) {
+//                //when the BottomView totally show.
+//            }
+//
+//            @Override
+//            public void onStartClose(SwipeLayout layout) {
+//
+//            }
+//
+//            @Override
+//            public void onHandRelease(SwipeLayout layout, float xvel, float yvel) {
+//                //when user's hand released.
+//            }
+//        });
     }
 }

@@ -2,7 +2,7 @@ package com.fisher.andrew.stockit.model;
 
 import android.widget.DatePicker;
 
-public class Item {
+public class ListItem {
 
 
     private String product;
@@ -10,7 +10,7 @@ public class Item {
     //Image at some point
     //Bar code at some point
 
-    public Item(String name){
+    public ListItem(String name){
         this.product = name;
     }
 

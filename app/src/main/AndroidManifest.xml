@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".ui.HomeListActivity">
         </activity>
+        <activity android:name=".ui.ShoppingListActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -9,17 +9,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.fisher.andrew.stockit.R;
-import com.fisher.andrew.stockit.model.Item;
+import com.fisher.andrew.stockit.model.ListItem;
 
 import java.util.List;
 
 //Basic adapter, needs to extend a customized ViewHolder to get access to our views
 public class ItemAdapter extends
         RecyclerView.Adapter<ItemAdapter.ViewHolder> {
-    private List<Item> mItems; //may have to plug with custom items
+    private List<ListItem> mItems; //may have to plug with custom items
     private Context mContext;
 
-    public ItemAdapter(Context context, List<Item> items){
+    public ItemAdapter(Context context, List<ListItem> items){
         mContext = context;
         mItems = items;
     }
@@ -44,7 +44,7 @@ public class ItemAdapter extends
     @Override
     public void onBindViewHolder(ItemAdapter.ViewHolder holder, int position) {
         //get item
-        Item item = mItems.get(position);
+        ListItem item = mItems.get(position);
 
         //attach to a textview
         TextView textView = holder.itemTextView;

@@ -6,14 +6,15 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.fisher.andrew.stockit.adapter.ItemAdapter;
-import com.fisher.andrew.stockit.model.Item;
+import com.fisher.andrew.stockit.model.ListItem;
 
 import com.fisher.andrew.stockit.R;
 
 import java.util.ArrayList;
 
 public class HomeListActivity extends AppCompatActivity {
-    ArrayList<Item> items;
+    ArrayList<ListItem> items;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,31 +25,36 @@ public class HomeListActivity extends AppCompatActivity {
 
         //forced values
         items = new ArrayList<>();
-        items.add(new Item("half-and-half"));
-        items.add(new Item("spinach"));
-        items.add(new Item("raisins"));
-        items.add(new Item("paprika"));
-        items.add(new Item("pancetta"));
-        items.add(new Item("cheddar cheese"));
-        items.add(new Item("pesto"));
-        items.add(new Item("huckleberries"));
-        items.add(new Item("molasses"));
-        items.add(new Item("baking powder"));
-        items.add(new Item("cornmeal"));
-        items.add(new Item("peanuts"));
-        items.add(new Item("onion powder"));
-        items.add(new Item("provolone"));
-        items.add(new Item("flour"));
-        items.add(new Item("pineapples"));
-        items.add(new Item("prawns"));
-        items.add(new Item("squash"));
-        items.add(new Item("Tabasco sauce"));
-        items.add(new Item("eggplants"));
-        items.add(new Item("ginger"));
-        items.add(new Item("oranges"));
-        items.add(new Item("chocolate"));
-        items.add(new Item("vinegar"));
-        items.add(new Item("raspberries"));
+        items.add(new ListItem("ketchup"));
+        items.add(new ListItem("pico de gallo"));
+        items.add(new ListItem("baguette"));
+        items.add(new ListItem("cumin"));
+        items.add(new ListItem("snap peas"));
+        items.add(new ListItem("shallots"));
+        items.add(new ListItem("kidney beans"));
+        items.add(new ListItem("french fries"));
+        items.add(new ListItem("eel"));
+        items.add(new ListItem("green onions"));
+
+        items.add(new ListItem("Romano cheese"));
+        items.add(new ListItem("granola"));
+        items.add(new ListItem("creme fraiche"));
+        items.add(new ListItem("blackberries"));
+        items.add(new ListItem("pumpkins"));
+        items.add(new ListItem("applesauce"));
+        items.add(new ListItem("buttermilk"));
+        items.add(new ListItem("celery"));
+
+
+        items.add(new ListItem("cherries"));
+        items.add(new ListItem("carrots"));
+
+        items.add(new ListItem("mint"));
+        items.add(new ListItem("veal"));
+
+        items.add(new ListItem("salmon"));
+        items.add(new ListItem("water"));
+        items.add(new ListItem("sugar"));
 
         //creates adapter with the context and list of items
         ItemAdapter itemAdapter = new ItemAdapter(this,items);

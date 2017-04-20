@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this,HomeListActivity.class);
             startActivity(intent);
         }else if (view == mShoppingListButton){
-            Toast.makeText(this, "Shopping List", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this,ShoppingListActivity.class);
+            startActivity(intent);
         }else if(view==mMapButton){
             Toast.makeText(this, "Map", Toast.LENGTH_SHORT).show();
         }else if(view ==mPictureButton){

@@ -23,5 +23,9 @@
     <string name="rotten_description">Upload a picture or look at other users pictures to judge whether your food is rotten!!!</string>
 
     <string name="instructions_again">See Instructions</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 </resources>

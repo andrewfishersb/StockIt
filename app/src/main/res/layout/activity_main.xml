@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.fisher.andrew.stockit.MainActivity">
+    tools:context="com.fisher.andrew.stockit.ui.MainActivity">
 
     <Button
         android:id="@+id/shoppingListButton"

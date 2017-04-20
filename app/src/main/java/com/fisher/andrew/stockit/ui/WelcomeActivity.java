@@ -1,4 +1,4 @@
-package com.fisher.andrew.stockit;
+package com.fisher.andrew.stockit.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +17,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.fisher.andrew.stockit.R;
 
 //GET RID OF BTN NEXT???? SINCE IT IS INVISIBLE
 public class WelcomeActivity extends AppCompatActivity {

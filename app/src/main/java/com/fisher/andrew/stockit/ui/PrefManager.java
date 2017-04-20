@@ -1,4 +1,4 @@
-package com.fisher.andrew.stockit;
+package com.fisher.andrew.stockit.ui;
 
 import android.content.Context;
 import android.content.SharedPreferences;

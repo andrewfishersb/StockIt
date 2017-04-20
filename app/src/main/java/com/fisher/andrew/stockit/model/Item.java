@@ -1,4 +1,4 @@
-package com.fisher.andrew.stockit;
+package com.fisher.andrew.stockit.model;
 
 import android.widget.DatePicker;
 

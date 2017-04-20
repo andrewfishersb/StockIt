@@ -1,6 +1,7 @@
 package com.fisher.andrew.stockit.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +12,6 @@ import com.fisher.andrew.stockit.R;
 import com.fisher.andrew.stockit.model.Item;
 
 import java.util.List;
-
-/**
- * Created by andrewfisher on 4/20/17.
- */
 
 //Basic adapter, needs to extend a customized ViewHolder to get access to our views
 public class ItemAdapter extends
@@ -61,16 +58,20 @@ public class ItemAdapter extends
         return mItems.size();
     }
 
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+    }
 
     //Provide a  direct reference to each of the views within a data item
     //Custom View holder
     public static class ViewHolder extends RecyclerView.ViewHolder{
         public TextView itemTextView;
-
+        CardView itemCardView;
         public ViewHolder (View itemView){
             //Stores the itemView in a public final member variable that can be used to access the context from any ViewHolder instance.
             super(itemView);
-
+            itemCardView = (CardView) itemView.findViewById(R.id.item_list_card);
             itemTextView = (TextView) itemView.findViewById(R.id.item_name);
 
         }

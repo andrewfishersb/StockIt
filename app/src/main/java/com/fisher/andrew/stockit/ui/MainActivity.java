@@ -1,5 +1,6 @@
 package com.fisher.andrew.stockit.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if(view == mHomeStockButton){
-            Toast.makeText(this, "Home Stock", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this,HomeListActivity.class);
+            startActivity(intent);
         }else if (view == mShoppingListButton){
             Toast.makeText(this, "Shopping List", Toast.LENGTH_SHORT).show();
         }else if(view==mMapButton){

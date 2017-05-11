@@ -1,18 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.fisher.andrew.stockit.ui.ShoppingListActivity"
     android:background="@color/bg_list"
-    >
 
+    >
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/shoppingItems"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginBottom="8dp"
+        android:layout_above="@+id/enter_new_items"
         />
-</android.support.constraint.ConstraintLayout>
+
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:id="@+id/enter_items"-->
+        <!--android:layout_margin="8dp"-->
+
+        <!--&gt;-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/enter_new_items"
+        android:layout_alignParentBottom="true"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/button_add_shopping_item"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/button_add_shopping_item"
+
+            android:layout_margin="4dp"
+            android:background="#ffffff"
+            android:hint="Enter Item"
+            android:padding="4dp"/>
+
+        <Button
+            android:id="@+id/button_add_shopping_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="4dp"
+            android:text="Add"/>
+    </RelativeLayout>
+    <!--</LinearLayout>-->
+</RelativeLayout>

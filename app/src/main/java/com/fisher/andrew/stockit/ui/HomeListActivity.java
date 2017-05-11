@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ImageView;
 
 import com.fisher.andrew.stockit.R;
 import com.fisher.andrew.stockit.adapter.ItemAdapter;
@@ -14,6 +13,8 @@ import java.util.ArrayList;
 
 public class HomeListActivity extends AppCompatActivity {
     ArrayList<ListItem> items;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +63,6 @@ public class HomeListActivity extends AppCompatActivity {
         //attach adapter to recyclerview
         rvItems.setAdapter(itemAdapter);
         rvItems.setLayoutManager(new LinearLayoutManager(this));
-        ImageView ex = (ImageView) findViewById(R.id.swipe_set_expiration);
-        ImageView send = (ImageView) findViewById(R.id.swipe_send_to_list);
-        ImageView delete = (ImageView) findViewById(R.id.swipe_delete);
-
 
 
 
@@ -112,4 +109,6 @@ public class HomeListActivity extends AppCompatActivity {
 //            }
 //        });
     }
+
+
 }

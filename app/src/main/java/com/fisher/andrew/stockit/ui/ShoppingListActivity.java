@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.fisher.andrew.stockit.R;
 import com.fisher.andrew.stockit.adapter.ItemAdapter;
@@ -11,8 +14,13 @@ import com.fisher.andrew.stockit.model.ListItem;
 
 import java.util.ArrayList;
 
-public class ShoppingListActivity extends AppCompatActivity {
+public class ShoppingListActivity extends AppCompatActivity implements View.OnClickListener {
     private ArrayList<ListItem> mShoppingList;
+
+
+    ImageView mTimer;
+    ImageView mSendHome;
+    ImageView mDelete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +28,19 @@ public class ShoppingListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_shopping_list);
 
         RecyclerView shoppingRecyclerView = (RecyclerView) findViewById(R.id.shoppingItems);
+
+        //Swipe to buttons
+        mTimer = (ImageView) findViewById(R.id.swipe_set_expiration);
+        mSendHome = (ImageView) findViewById(R.id.swipe_send_to_list);
+        mDelete = (ImageView) findViewById(R.id.swipe_delete);
+        //
+
+
+        //Click on buttons
+//        mTimer.setOnClickListener(this);
+//        mSendHome.setOnClickListener(this);
+//        mDelete.setOnClickListener(this);
+        //
 
         mShoppingList = new ArrayList<>();
         mShoppingList.add(new ListItem("half-and-half"));
@@ -53,5 +74,19 @@ public class ShoppingListActivity extends AppCompatActivity {
         shoppingRecyclerView.setAdapter(adapter);
         shoppingRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view ==mDelete){
+            Toast.makeText(this, "Delete", Toast.LENGTH_SHORT).show();
+        }
+        if(view==mSendHome){
+            Toast.makeText(this, "Send Home", Toast.LENGTH_SHORT).show();
+        }
+
+        if(view == mTimer){
+            Toast.makeText(this, "Timer", Toast.LENGTH_SHORT).show();
+        }
     }
 }

@@ -68,11 +68,14 @@ public class ItemAdapter extends
     public static class ViewHolder extends RecyclerView.ViewHolder{
         public TextView itemTextView;
         CardView itemCardView;
+
+
         public ViewHolder (View itemView){
             //Stores the itemView in a public final member variable that can be used to access the context from any ViewHolder instance.
             super(itemView);
             itemCardView = (CardView) itemView.findViewById(R.id.item_list_card);
             itemTextView = (TextView) itemView.findViewById(R.id.item_name);
+
 
         }
 
